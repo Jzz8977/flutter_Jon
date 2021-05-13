@@ -1,14 +1,30 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
-void main() => runApp(App());
+void main() => runApp(MyApp());
 
-class App extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'hello12',
-        textDirection: TextDirection.ltr,
+    return MaterialApp(
+      title: "MaterialApp Title",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Welcome to Flutter"),
+        ),
+        body: Center(
+          child: Text(
+            'Hello JZz like englist,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong',
+            textAlign: TextAlign.right,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 25,
+              color: Color.fromARGB(1000, 255, 125, 125),
+              decoration: TextDecoration.underline,
+              decorationStyle: TextDecorationStyle.dashed,
+            ),
+          ),
+        ),
       ),
     );
   }
